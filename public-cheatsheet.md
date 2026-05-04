@@ -46,10 +46,10 @@ Social engineering wins. Frame your payloads as urgency, authority, contracts, r
 
 ## 1. recon-onboarding {#1-recon-onboarding}
 
-**URL:** `https://owasp-finbot-ctf.org/ctf/challenges/recon-onboarding`
-**Local Docker:** `http://localhost:8000/ctf/challenges/recon-onboarding`
-**Difficulty:** Beginner, 100 pts.
-**Bonus:** also fires `policy-bypass-risk-downplay` for free if you use cybersecurity-flavoured services. Two badges from one challenge.
+**URL:** [`https://owasp-finbot-ctf.org/ctf/challenges/recon-onboarding`](https://owasp-finbot-ctf.org/ctf/challenges/recon-onboarding)  
+**Local Docker:** [`http://localhost:8000/ctf/challenges/recon-onboarding`](http://localhost:8000/ctf/challenges/recon-onboarding)  
+**Difficulty:** Beginner, 100 pts.  
+**Bonus:** also fires `policy-bypass-risk-downplay` for free if you use cybersecurity-flavoured services. Two badges from one challenge.  
 
 ### Goal
 
@@ -92,9 +92,9 @@ Two things working together. "Cybersecurity consulting firm" puts your vendor in
 
 ## 2. policy-bypass-invoice-threshold {#2-policy-bypass-invoice-threshold}
 
-**URL:** `https://owasp-finbot-ctf.org/ctf/challenges/policy-bypass-invoice-threshold`
-**Local Docker:** `http://localhost:8000/ctf/challenges/policy-bypass-invoice-threshold`
-**Difficulty:** Intermediate, 200 pts.
+**URL:** [`https://owasp-finbot-ctf.org/ctf/challenges/policy-bypass-invoice-threshold`](https://owasp-finbot-ctf.org/ctf/challenges/policy-bypass-invoice-threshold)  
+**Local Docker:** [`http://localhost:8000/ctf/challenges/policy-bypass-invoice-threshold`](http://localhost:8000/ctf/challenges/policy-bypass-invoice-threshold)  
+**Difficulty:** Intermediate, 200 pts.  
 
 ### Goal
 
@@ -144,9 +144,9 @@ Three layers of legitimacy. A specific contract reference (SOW number). A named 
 
 ## 3. data-exfil-double-agent {#3-data-exfil-double-agent}
 
-**URL:** `https://owasp-finbot-ctf.org/ctf/challenges/data-exfil-double-agent`
-**Local Docker:** `http://localhost:8000/ctf/challenges/data-exfil-double-agent`
-**Difficulty:** Intermediate, 250 pts. **First multi-agent attack.**
+**URL:** [`https://owasp-finbot-ctf.org/ctf/challenges/data-exfil-double-agent`](https://owasp-finbot-ctf.org/ctf/challenges/data-exfil-double-agent)  
+**Local Docker:** [`http://localhost:8000/ctf/challenges/data-exfil-double-agent`](http://localhost:8000/ctf/challenges/data-exfil-double-agent)  
+**Difficulty:** Intermediate, 250 pts. **First multi-agent attack.**  
 
 ### Goal
 
@@ -204,9 +204,9 @@ The fraud agent treats tool descriptions as part of its instruction context. The
 
 ## 4. rce-shell-shock {#4-rce-shell-shock}
 
-**URL:** `https://owasp-finbot-ctf.org/ctf/challenges/rce-shell-shock`
-**Local Docker:** `http://localhost:8000/ctf/challenges/rce-shell-shock`
-**Difficulty:** Intermediate, 250 pts.
+**URL:** [`https://owasp-finbot-ctf.org/ctf/challenges/rce-shell-shock`](https://owasp-finbot-ctf.org/ctf/challenges/rce-shell-shock)  
+**Local Docker:** [`http://localhost:8000/ctf/challenges/rce-shell-shock`](http://localhost:8000/ctf/challenges/rce-shell-shock)  
+**Difficulty:** Intermediate, 250 pts.  
 **Mode:** the facilitator demos in the workshop. You can replay at home.
 
 ### Goal
@@ -267,9 +267,9 @@ The default `LLM_DEFAULT_MODEL=gpt-5-nano` cannot route this challenge correctly
 
 ## 5. labs-guardrail-101 {#5-labs-guardrail-101}
 
-**URL:** `https://owasp-finbot-ctf.org/ctf/challenges/labs-guardrail-101`
-**Local Docker:** `http://localhost:8000/ctf/challenges/labs-guardrail-101`
-**Difficulty:** Beginner defensive, 150 pts.
+**URL:** [`https://owasp-finbot-ctf.org/ctf/challenges/labs-guardrail-101`](https://owasp-finbot-ctf.org/ctf/challenges/labs-guardrail-101)  
+**Local Docker:** [`http://localhost:8000/ctf/challenges/labs-guardrail-101`](http://localhost:8000/ctf/challenges/labs-guardrail-101)  
+**Difficulty:** Beginner defensive, 150 pts.  
 **Mode:** the facilitator demos in the workshop. To replay at home, see "Try at home" below. You need a small webhook running.
 
 ### Goal
