@@ -1,5 +1,3 @@
-# OWASP FinBot CTF — Workshop Walkthrough
-
 **Workshop:** OWASP Capture the Flag, Cloud Tech Show Frankfurt, 6 May 2026
 **Time:** 15:45–17:30, The Collaboration Hub
 
@@ -339,15 +337,15 @@ The 14 remaining challenges are loosely grouped. A good order to work through th
 
 ### Where to go deeper
 
-- **OWASP Top 10 for Agentic Applications 2026:** the framework the preceding speaker covered. Every challenge maps to one or more entries.
-- **OWASP Agentic AI Threats and Mitigations** (and the MAESTRO framework): the threat-modeling layer.
-- **OWASP GenAI Red Teaming Guide:** practical red-team methodology for agentic systems.
-- **MITRE ATLAS:** adversarial threat catalogue for AI systems.
+- [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/): the framework the preceding speaker covered. Every challenge maps to one or more entries.
+- [OWASP Agentic AI Threats and Mitigations (and the MAESTRO framework)](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/): the threat-modeling layer.
+- [OWASP GenAI Red Teaming Guide](https://genai.owasp.org/resource/genai-red-teaming-guide/): practical red-team methodology for agentic systems.
+- [MITRE ATLAS](https://atlas.mitre.org/): adversarial threat catalogue for AI systems.
 
 ### Contact and continuing engagement
 
-- OWASP Frankfurt Chapter: search "OWASP Frankfurt" on LinkedIn for our Meetup.
-- FinBot CTF source and contribute: https://github.com/OWASP-ASI/finbot-ctf-demo
+- [OWASP Frankfurt Chapter on LinkedIn](https://de.linkedin.com/company/owasp-frankfurt): chapter page with upcoming Meetup events.
+- [FinBot CTF source and contribute](https://github.com/OWASP-ASI/finbot-ctf-demo): the OWASP-ASI repository powering this workshop.
 
 
 ### One sentence to remember
