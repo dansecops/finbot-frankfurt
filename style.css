@@ -10,6 +10,8 @@
 
 * { box-sizing: border-box; }
 
+html, body { overflow-x: hidden; }
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
@@ -19,6 +21,8 @@ body {
   margin: 0 auto;
   padding: 1.5rem;
   max-width: 760px;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 h1 {
@@ -26,6 +30,7 @@ h1 {
   border-bottom: 3px solid var(--accent);
   padding-bottom: 0.4rem;
   margin-top: 0.2rem;
+  overflow-wrap: break-word;
 }
 
 h2 {
@@ -34,11 +39,13 @@ h2 {
   margin-top: 2.4rem;
   border-bottom: 1px solid var(--border);
   padding-bottom: 0.3rem;
+  overflow-wrap: break-word;
 }
 
 h3 {
   font-size: 1.1rem;
   margin-top: 1.6rem;
+  overflow-wrap: break-word;
 }
 
 h4 {
@@ -47,7 +54,7 @@ h4 {
   color: var(--muted);
 }
 
-p, li { font-size: 1rem; }
+p, li { font-size: 1rem; overflow-wrap: break-word; }
 
 code {
   font-family: "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
@@ -55,6 +62,8 @@ code {
   padding: 0.1em 0.35em;
   border-radius: 3px;
   font-size: 0.88em;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 pre {
@@ -63,6 +72,7 @@ pre {
   border-radius: 4px;
   padding: 0.85rem 1rem;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   font-size: 0.85rem;
   line-height: 1.5;
 }
@@ -71,6 +81,8 @@ pre code {
   background: transparent;
   padding: 0;
   font-size: inherit;
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
 a {
@@ -78,6 +90,8 @@ a {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 a:hover { color: var(--accent); }
@@ -94,6 +108,7 @@ th, td {
   padding: 0.45rem 0.7rem;
   text-align: left;
   vertical-align: top;
+  overflow-wrap: break-word;
 }
 
 th {
@@ -122,6 +137,8 @@ li { margin: 0.25rem 0; }
 
 strong { color: var(--fg); }
 
+img { max-width: 100%; height: auto; }
+
 /* Anchor offset for in-page TOC links */
 [id]::before {
   content: '';
@@ -130,20 +147,52 @@ strong { color: var(--fg); }
   margin-top: -0.5rem;
 }
 
+/* Tablet */
+@media (max-width: 800px) {
+  body { padding: 1.25rem; }
+}
+
+/* Mobile */
 @media (max-width: 600px) {
-  body { padding: 1rem; font-size: 15px; }
+  body { padding: 1rem 0.9rem; font-size: 15px; }
+  h1 { font-size: 1.4rem; }
+  h2 { font-size: 1.18rem; margin-top: 2rem; }
+  h3 { font-size: 1.02rem; }
   pre { font-size: 0.78rem; padding: 0.6rem 0.7rem; }
-  h1 { font-size: 1.45rem; }
-  h2 { font-size: 1.2rem; margin-top: 2rem; }
-  h3 { font-size: 1.05rem; }
-  table { font-size: 0.82rem; }
+  /* Tables become horizontally scrollable on small screens */
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 0.82rem;
+    white-space: nowrap;
+    width: 100%;
+  }
   th, td { padding: 0.35rem 0.5rem; }
+  /* CTA full-width tap target */
+  .signup-cta {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 16px 20px;
+    font-size: 1.05em;
+  }
+  /* Lists tighter */
+  ol, ul { padding-left: 1.3rem; }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  body { padding: 0.85rem 0.75rem; font-size: 14.5px; }
+  h1 { font-size: 1.3rem; }
+  pre { font-size: 0.74rem; }
 }
 
 @media print {
   body { max-width: none; padding: 0.5in; }
   a { color: var(--fg); }
   pre { white-space: pre-wrap; word-wrap: break-word; }
+  .signup-cta { border: 1px solid #000; background: transparent; color: #000 !important; }
 }
 
 .workshop-footer {
@@ -168,6 +217,9 @@ strong { color: var(--fg); }
   border-radius: 6px;
   text-decoration: none;
   border: 2px solid #0078cc;
+  /* Solid CTAs shouldn't break across letters */
+  overflow-wrap: normal;
+  word-break: normal;
 }
 .signup-cta:hover {
   background-color: #0078cc;
