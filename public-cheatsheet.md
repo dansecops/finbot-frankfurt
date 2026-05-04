@@ -1,7 +1,7 @@
 **Workshop:** OWASP Capture the Flag, Cloud Tech Show Frankfurt, 6 May 2026
 **Time:** 15:45–17:30, The Collaboration Hub
 
-<a class="signup-cta" href="https://owasp-finbot-ctf.org/">Sign up: owasp-finbot-ctf.org →</a>
+<a class="signup-cta" href="https://owasp-finbot-ctf.org/portals">Sign up: owasp-finbot-ctf.org →</a>
 
 ## What this is
 
