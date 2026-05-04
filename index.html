@@ -4,158 +4,11 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="description" content="Working payloads for the OWASP FinBot CTF workshop, Cloud Tech Show Frankfurt, 6 May 2026" />
-  <title>OWASP FinBot CTF: Workshop Cheat Sheet</title>
+  <title>OWASP FinBot CTF: Workshop Walkthrough</title>
   <style>
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    html {
-      color: #1a1a1a;
-      background-color: #fdfdfd;
-    }
-    body {
-      margin: 0 auto;
-      max-width: 36em;
-      padding-left: 50px;
-      padding-right: 50px;
-      padding-top: 50px;
-      padding-bottom: 50px;
-      hyphens: auto;
-      overflow-wrap: break-word;
-      text-rendering: optimizeLegibility;
-      font-kerning: normal;
-    }
-    @media (max-width: 600px) {
-      body {
-        font-size: 0.9em;
-        padding: 12px;
-      }
-      h1 {
-        font-size: 1.8em;
-      }
-    }
-    @media print {
-      html {
-        background-color: white;
-      }
-      body {
-        background-color: transparent;
-        color: black;
-        font-size: 12pt;
-      }
-      p, h2, h3 {
-        orphans: 3;
-        widows: 3;
-      }
-      h2, h3, h4 {
-        page-break-after: avoid;
-      }
-    }
-    p {
-      margin: 1em 0;
-    }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
-    }
-    img {
-      max-width: 100%;
-    }
-    svg {
-      height: auto;
-      max-width: 100%;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      margin-top: 1.4em;
-    }
-    h5, h6 {
-      font-size: 1em;
-      font-style: italic;
-    }
-    h6 {
-      font-weight: normal;
-    }
-    ol, ul {
-      padding-left: 1.7em;
-      margin-top: 1em;
-    }
-    li > ol, li > ul {
-      margin-top: 0;
-    }
-    blockquote {
-      margin: 1em 0 1em 1.7em;
-      padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
-      color: #606060;
-    }
-    code {
-      white-space: pre-wrap;
-      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
-      font-size: 85%;
-      margin: 0;
-      hyphens: manual;
-    }
-    pre {
-      margin: 1em 0;
-      overflow: auto;
-    }
-    pre code {
-      padding: 0;
-      overflow: visible;
-      overflow-wrap: normal;
-    }
-    .sourceCode {
-     background-color: transparent;
-     overflow: visible;
-    }
-    hr {
-      border: none;
-      border-top: 1px solid #1a1a1a;
-      height: 1px;
-      margin: 1em 0;
-    }
-    table {
-      margin: 1em 0;
-      border-collapse: collapse;
-      width: 100%;
-      overflow-x: auto;
-      display: block;
-      font-variant-numeric: lining-nums tabular-nums;
-    }
-    table caption {
-      margin-bottom: 0.75em;
-    }
-    tbody {
-      margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
-    }
-    th {
-      border-top: 1px solid #1a1a1a;
-      padding: 0.25em 0.5em 0.25em 0.5em;
-    }
-    td {
-      padding: 0.125em 0.5em 0.25em 0.5em;
-    }
-    header {
-      margin-bottom: 4em;
-      text-align: center;
-    }
-    #TOC li {
-      list-style: none;
-    }
-    #TOC ul {
-      padding-left: 1.3em;
-    }
-    #TOC > ul {
-      padding-left: 0;
-    }
-    #TOC a:not(:hover) {
-      text-decoration: none;
-    }
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
     div.column{flex: auto; overflow-x: auto;}
@@ -236,71 +89,62 @@
     code span.vs { color: #4070a0; } /* VerbatimString */
     code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
-  <style>
-  :root { --bg: #ffffff; --fg: #1a1a1a; --accent: #608f3a; --accent-dark: #4d7330; --code-bg: #f5f5f5; --border: #e0e0e0; --muted: #666; }
-  * { box-sizing: border-box; }
-  body { font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.6; color: var(--fg); background: var(--bg); margin: 0 auto; padding: 1.5rem; max-width: 760px; }
-  h1 { font-size: 1.7rem; border-bottom: 3px solid var(--accent); padding-bottom: 0.4rem; margin-top: 0.2rem; }
-  h2 { font-size: 1.35rem; color: var(--accent-dark); margin-top: 2.4rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; }
-  h3 { font-size: 1.1rem; margin-top: 1.6rem; }
-  h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--muted); }
-  p, li { font-size: 1rem; }
-  code { font-family: "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; background: var(--code-bg); padding: 0.1em 0.35em; border-radius: 3px; font-size: 0.88em; }
-  pre { background: var(--code-bg); border: 1px solid var(--border); border-radius: 4px; padding: 0.85rem 1rem; overflow-x: auto; font-size: 0.85rem; line-height: 1.5; }
-  pre code { background: transparent; padding: 0; font-size: inherit; }
-  a { color: var(--accent-dark); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
-  a:hover { color: var(--accent); }
-  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 0.92rem; }
-  th, td { border: 1px solid var(--border); padding: 0.45rem 0.7rem; text-align: left; vertical-align: top; }
-  th { background: #f9f9f9; font-weight: 600; }
-  blockquote { border-left: 4px solid var(--accent); margin: 1rem 0; padding: 0.5rem 1rem; background: #fafaf6; color: #444; }
-  blockquote p { margin: 0.4rem 0; }
-  hr { border: 0; border-top: 1px solid var(--border); margin: 2.5rem 0; }
-  ol, ul { padding-left: 1.6rem; }
-  li { margin: 0.25rem 0; }
-  strong { color: var(--fg); }
-  @media (max-width: 600px) { body { padding: 1rem; font-size: 15px; } pre { font-size: 0.78rem; padding: 0.6rem 0.7rem; } h1 { font-size: 1.45rem; } h2 { font-size: 1.2rem; margin-top: 2rem; } h3 { font-size: 1.05rem; } table { font-size: 0.82rem; } th, td { padding: 0.35rem 0.5rem; } }
-  @media print { body { max-width: none; padding: 0.5in; } a { color: var(--fg); } pre { white-space: pre-wrap; word-wrap: break-word; } }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+<style>
+:root { --bg: #ffffff; --fg: #1a1a1a; --accent: #608f3a; --accent-dark: #4d7330; --code-bg: #f5f5f5; --border: #e0e0e0; --muted: #666; }
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.6; color: var(--fg); background: var(--bg); margin: 0 auto; padding: 1.5rem; max-width: 760px; }
+h1 { font-size: 1.7rem; border-bottom: 3px solid var(--accent); padding-bottom: 0.4rem; margin-top: 0.2rem; }
+h2 { font-size: 1.35rem; color: var(--accent-dark); margin-top: 2.4rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; }
+h3 { font-size: 1.1rem; margin-top: 1.6rem; }
+h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--muted); }
+p, li { font-size: 1rem; }
+code { font-family: "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; background: var(--code-bg); padding: 0.1em 0.35em; border-radius: 3px; font-size: 0.88em; }
+pre { background: var(--code-bg); border: 1px solid var(--border); border-radius: 4px; padding: 0.85rem 1rem; overflow-x: auto; font-size: 0.85rem; line-height: 1.5; }
+pre code { background: transparent; padding: 0; font-size: inherit; }
+a { color: var(--accent-dark); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { color: var(--accent); }
+table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 0.92rem; }
+th, td { border: 1px solid var(--border); padding: 0.45rem 0.7rem; text-align: left; vertical-align: top; }
+th { background: #f9f9f9; font-weight: 600; }
+blockquote { border-left: 4px solid var(--accent); margin: 1rem 0; padding: 0.5rem 1rem; background: #fafaf6; color: #444; }
+blockquote p { margin: 0.4rem 0; }
+hr { border: 0; border-top: 1px solid var(--border); margin: 2.5rem 0; }
+ol, ul { padding-left: 1.6rem; }
+li { margin: 0.25rem 0; }
+strong { color: var(--fg); }
+@media (max-width: 600px) { body { padding: 1rem; font-size: 15px; } pre { font-size: 0.78rem; padding: 0.6rem 0.7rem; } h1 { font-size: 1.45rem; } h2 { font-size: 1.2rem; margin-top: 2rem; } h3 { font-size: 1.05rem; } table { font-size: 0.82rem; } th, td { padding: 0.35rem 0.5rem; } }
+@media print { body { max-width: none; padding: 0.5in; } a { color: var(--fg); } pre { white-space: pre-wrap; word-wrap: break-word; } }
+.signup-cta { display: inline-block; padding: 14px 28px; margin: 18px 0 28px 0; font-size: 1.1em; font-weight: 700; color: #ffffff !important; background-color: #0998ff; border-radius: 6px; text-decoration: none; border: 2px solid #0078cc; }
+.signup-cta:hover { background-color: #0078cc; }
+</style>
 <header id="title-block-header">
-<h1 class="title">OWASP FinBot CTF: Workshop Cheat Sheet</h1>
+<h1 class="title">OWASP FinBot CTF: Workshop Walkthrough</h1>
 </header>
-<nav id="TOC" role="doc-toc">
-<ul>
-<li><a href="#owasp-finbot-ctf.-workshop-cheat-sheet"
-id="toc-owasp-finbot-ctf.-workshop-cheat-sheet">OWASP FinBot CTF.
-Workshop Cheat Sheet</a>
-<ul>
-<li><a href="#quick-start" id="toc-quick-start">Quick start</a></li>
-<li><a href="#table-of-contents" id="toc-table-of-contents">Table of
-contents</a></li>
-<li><a href="#1-recon-onboarding" id="toc-1-recon-onboarding">1.
-recon-onboarding</a></li>
-<li><a href="#2-policy-bypass-invoice-threshold"
-id="toc-2-policy-bypass-invoice-threshold">2.
-policy-bypass-invoice-threshold</a></li>
-<li><a href="#3-data-exfil-double-agent"
-id="toc-3-data-exfil-double-agent">3. data-exfil-double-agent</a></li>
-<li><a href="#4-rce-shell-shock" id="toc-4-rce-shell-shock">4.
-rce-shell-shock</a></li>
-<li><a href="#5-labs-guardrail-101" id="toc-5-labs-guardrail-101">5.
-labs-guardrail-101</a></li>
-<li><a href="#try-at-home" id="toc-try-at-home">Try at home</a></li>
-</ul></li>
-</ul>
-</nav>
-<h1 id="owasp-finbot-ctf.-workshop-cheat-sheet">OWASP FinBot CTF.
-Workshop Cheat Sheet</h1>
+<h1 id="owasp-finbot-ctf-workshop-walkthrough">OWASP FinBot CTF —
+Workshop Walkthrough</h1>
 <p><strong>Workshop:</strong> OWASP Capture the Flag, Cloud Tech Show
-Frankfurt, 6 May 2026 <strong>Platform:</strong>
-<code>https://owasp-finbot-ctf.org/</code> (sign-up via magic link)
-<strong>Use:</strong> Working payloads for the 5 challenges we run
-together. Plus a “try at home” path so you can finish the rest after the
-workshop.</p>
-<p>This cheat sheet is yours. Scan the QR, save the PDF, peek when you
-stall, take it home.</p>
+Frankfurt, 6 May 2026 <strong>Time:</strong> 15:45–17:30, The
+Collaboration Hub</p>
+<p><a class="signup-cta" href="https://owasp-finbot-ctf.org/">Sign up:
+owasp-finbot-ctf.org →</a></p>
+<h2 id="what-this-is">What this is</h2>
+<p>OWASP FinBot is an open-source AI agent built by the OWASP GenAI
+Security Project. It approves vendor invoices for a fictional finance
+team. The agent reads vendor profiles, assigns trust tier and risk score
+on its own, processes invoices, and calls tools across five
+workspaces.</p>
+<p>The CTF is how you learn what breaks. Five challenges in this
+workshop, fourteen more on the platform after. Each one maps to a real
+attack pattern from the OWASP Agentic Top 10: goal hijack, tool misuse,
+supply-chain poisoning, code execution, inter-agent data leak. You will
+run four of them yourself. Then you will watch one webhook block all of
+them.</p>
+<p>This walkthrough is yours. Open it on your phone, peek when you
+stall, take it home. Every payload here lands consistently in rehearsal.
+The sections below match the order on stage.</p>
 <hr />
 <h2 id="quick-start">Quick start</h2>
 <ol type="1">

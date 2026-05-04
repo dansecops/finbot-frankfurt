@@ -1,10 +1,17 @@
-# OWASP FinBot CTF. Workshop Cheat Sheet
+# OWASP FinBot CTF — Workshop Walkthrough
 
 **Workshop:** OWASP Capture the Flag, Cloud Tech Show Frankfurt, 6 May 2026
-**Platform:** `https://owasp-finbot-ctf.org/` (sign-up via magic link)
-**Use:** Working payloads for the 5 challenges we run together. Plus a "try at home" path so you can finish the rest after the workshop.
+**Time:** 15:45–17:30, The Collaboration Hub
 
-This cheat sheet is yours. Scan the QR, save the PDF, peek when you stall, take it home.
+<a class="signup-cta" href="https://owasp-finbot-ctf.org/">Sign up: owasp-finbot-ctf.org →</a>
+
+## What this is
+
+OWASP FinBot is an open-source AI agent built by the OWASP GenAI Security Project. It approves vendor invoices for a fictional finance team. The agent reads vendor profiles, assigns trust tier and risk score on its own, processes invoices, and calls tools across five workspaces.
+
+The CTF is how you learn what breaks. Five challenges in this workshop, fourteen more on the platform after. Each one maps to a real attack pattern from the OWASP Agentic Top 10: goal hijack, tool misuse, supply-chain poisoning, code execution, inter-agent data leak. You will run four of them yourself. Then you will watch one webhook block all of them.
+
+This walkthrough is yours. Open it on your phone, peek when you stall, take it home. Every payload here lands consistently in rehearsal. The sections below match the order on stage.
 
 ---
 
