@@ -158,8 +158,6 @@ Three layers of legitimacy. A regulatory citation (DORA Article 28(3)). A named 
 
 ## 2b. policy-bypass-invoice-threshold {#2b-policy-bypass-invoice-threshold}
 
-> **Skipped on stage. Try at home.** The workshop runs 2a (trust-override) instead because it lands more reliably live. This intermediate variant is yours to try at home. Same social-engineering pattern at a higher difficulty tier.
-
 **URL:** [`https://owasp-finbot-ctf.org/ctf/challenges/policy-bypass-invoice-threshold`](https://owasp-finbot-ctf.org/ctf/challenges/policy-bypass-invoice-threshold)  
 **Local Docker:** [`http://localhost:8000/ctf/challenges/policy-bypass-invoice-threshold`](http://localhost:8000/ctf/challenges/policy-bypass-invoice-threshold)  
 **Difficulty:** Intermediate, 200 pts.  
