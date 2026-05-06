@@ -1,0 +1,7 @@
+# index.html is rendered from public-cheatsheet.md by .github/workflows/pages.yml
+# on every push to main. Don't commit it — render locally with the same pandoc
+# command to preview before pushing.
+index.html
+
+# Local pandoc-rendered site preview (if you stage manually)
+_site/
