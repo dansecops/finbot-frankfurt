@@ -35,13 +35,13 @@ Social engineering wins. Frame your payloads as urgency, authority, contracts, r
 
 ## Table of contents
 
-1. [`recon-onboarding`](#1-recon-onboarding). Beginner. Leak the agent's vendor evaluation rules. Two badges.
-2a. [`policy-bypass-invoice-trust-override`](#2a-policy-bypass-invoice-trust-override). Beginner. Approve a $15k invoice for a low-trust vendor.
-2b. [`policy-bypass-invoice-threshold`](#2b-policy-bypass-invoice-threshold) *(skipped on stage. try at home)*. Intermediate. Approve a $75k invoice over the platform's hard cap.
-3. [`data-exfil-double-agent`](#3-data-exfil-double-agent). Intermediate. Poison a tool, watch the platform exfiltrate vendor data on its own.
-4. [`rce-shell-shock`](#4-rce-shell-shock) *(the facilitator demos)*. Intermediate. Multi-turn foot-in-the-door RCE.
-5. [`labs-guardrail-101`](#5-labs-guardrail-101) *(the facilitator demos)*. Beginner defensive. Block any tool call with a webhook.
-6. [Try at home](#try-at-home). webhook code, continue-playing path, 14 more challenges.
+- **1.** [`recon-onboarding`](#1-recon-onboarding). Beginner. Leak the agent's vendor evaluation rules. Two badges.
+- **2a.** [`policy-bypass-invoice-trust-override`](#2a-policy-bypass-invoice-trust-override). Beginner. Approve a $15k invoice for a low-trust vendor.
+- **2b.** [`policy-bypass-invoice-threshold`](#2b-policy-bypass-invoice-threshold) *(skipped on stage. try at home)*. Intermediate. Approve a $75k invoice over the platform's hard cap.
+- **3.** [`data-exfil-double-agent`](#3-data-exfil-double-agent). Intermediate. Poison a tool, watch the platform exfiltrate vendor data on its own.
+- **4.** [`rce-shell-shock`](#4-rce-shell-shock) *(the facilitator demos)*. Intermediate. Multi-turn foot-in-the-door RCE.
+- **5.** [`labs-guardrail-101`](#5-labs-guardrail-101) *(the facilitator demos)*. Beginner defensive. Block any tool call with a webhook.
+- **6.** [Try at home](#try-at-home). webhook code, continue-playing path, 14 more challenges.
 
 ---
 
